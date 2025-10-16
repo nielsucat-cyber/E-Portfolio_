@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AP Page</title>
+  <link rel="stylesheet" href="design.css">
+    <style type="text/css">
+    .slideshow-container {
+      position: relative;
+      width: 400px;
+      height: 420px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0, 0, 50, 0.4);
+      margin: 0 auto;
+      padding-bottom: 20px;
+    }
+
+    /* 🖼️ Polaroid Photo Look */
+    .photo-frame {
+      position: relative;
+      background: white;
+      width: 320px;
+      height: 330px;
+      padding: 10px 10px 45px 10px;
+      border-radius: 6px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: rotate(-2deg);
+      transition: transform 0.3s ease;
+    }
+
+    .photo-frame:hover {
+      transform: rotate(0deg) scale(1.02);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+
+    /* ◀ ▶ Buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 30, 90, 0.8);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 50%;
+      border: none;
+      font-size: 20px;
+      transition: 0.3s;
+      user-select: none;
+    }
+
+    .prev:hover, .next:hover {
+      background-color: #0059b3;
+    }
+
+    .prev { left: -50px; }
+    .next { right: -50px; }
+
+    /* 🪶 Simple Caption */
+    .caption {text-align: center;
+      margin-top: 15px;
+      color:black;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    /* ✨ Animation */
+    .fade {
+      animation: fadeEffect 1s;
+    }
+
+    @keyframes fadeEffect {
+      from {opacity: 0.3;}
+      to {opacity: 1;}
+    }
+	</style>
+</head>
+<body>
+<header>
+  <h1 class="site-title">E-Portfolio: AP & ICT</h1>
+  <nav>
+    <a href="home.html">Main</a>
+    <a href="personal.html">Personal</a>
+    <a href="ICT.html">ICT</a>
+	<a href="Events.html">Events</a>
+    <a href="AP.html">AP</a>
+  </nav>
+</header>
+  
+   <section>  
+    <h2>AP Lessons</h2>
+<hr style="border:none; height:5px; background:linear-gradient(to right, #FFD700 80%, #0a3d91 20%); border-radius:5px; margin:20px 0;">
+    <div class="section-text">
+      <a style="font-size:25px;" href="Demand.pdf" target="_blank">Lesson1 - Demand</a>
+      <p style="text-align:justify;">      
+      Demand ay ang dami ng produkto o serbisyo na nais at kayang bilhin
+      ng mamimili sa iba’t ibang presyo sa isang takdang panahon. 
+      Ayon sa Batas ng Demand, kapag tumaas ang presyo ay bumababa ang demand, at
+      kapag bumaba ang presyo ay tumataas ang demand (ceteris paribus o
+      walang ibang nagbabago). Ipinapakita ito sa schedule of demand (talahanayan),
+      demand curve (graph na pababa ang slope), at demand function (ekwasyon).
+      Bukod sa presyo, nakakaapekto rin ang kita, panlasa, kaugnay na produkto, 
+      populasyon, at inaasahang presyo.
+	  </p>
+	</div>
+  <div class="slideshow-container" id="demand-slideshow">
+    <div class="photo-frame">
+      <div class="slide fade">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.MwxWbmPZW7u1KF5aRo9hMgHaFR?pid=Api&P=0&h=220" alt="demand">
+      </div>
+      <div class="slide fade">
+        <img src="https://4.bp.blogspot.com/-Qs1jerEd4Zk/XoW7B98RDfI/AAAAAAAAX7k/t7iZAbyDdmgUhA6gdmq7BBTYe9fBEkjaQCK4BGAYYCw/s400/Linear%2BDemand%2BFunction%2B-%2BDiagram%2B1.png" alt="demand function">
+      </div>
+      <div class="slide fade">
+        <img src="https://www.economicsonline.co.uk/content/images/2023/06/Supply-and-Demand-4.webp" alt="demand curve">
+      </div>
+      <div class="slide fade">
+        <img src="https://i.ytimg.com/vi/D2WgMDKJI6A/maxresdefault.jpg" alt="demand schedule">
+      </div>
+    </div>
+
+<button class="prev" onclick="changeSlide('demand-slideshow', -1)">❮</button>
+<button class="next" onclick="changeSlide('demand-slideshow', 1)">❯</button>
+
+  </div>
+
+  <div class="caption" id="caption">Demand</div>
+  <iframe class="video-frame" 
+    src="https://www.youtube.com/embed/kXOGttpe7ZA"
+    title="Youtube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+  
+<hr class="blue-line">
+    <div class="section-text">
+      <a style="font-size:25px;" href="Supply.pdf" target="_blank">Lesson2 - Supply</a>
+      <p style="text-align:justify;">      
+      Ang supply ay tumutukoy sa dami ng mga produkto 
+	  o serbisyo na handa at kayang ipagbili ng mga 
+	  prodyuser sa iba’t ibang presyo sa loob ng isang 
+	  takdang panahon. Karaniwan, kapag tumataas ang presyo, 
+	  tumataas din ang dami ng supply — ito ay kilala bilang 
+	  batas ng supply (law of supply). 
+	  </p>
+	</div>
+  <div class="slideshow-container" id="supply-slideshow">
+    <div class="photo-frame">
+      <div class="slide fade">
+        <img src="https://www.ezilearning.com/wp-content/uploads/2022/12/law-of-supply-graph.jpg" alt="supply">
+      </div>
+      <div class="slide fade">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.e5Rt_OQUc1vS0Z3HlbBb2wHaFj?pid=Api&P=0&h=220" alt="supply function">
+      </div>
+      <div class="slide fade">
+        <img src="https://www.economicsonline.co.uk/content/images/2023/06/Supply-and-Demand-2.webp" alt="supply curve">
+      </div>
+      <div class="slide fade">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.lCvnCSrwfnHt81DvF-8OlAHaFj?pid=Api&P=0&h=220" alt="supply schedule">
+      </div>
+    </div>
+
+<button class="prev" onclick="changeSlide('supply-slideshow', -1)">❮</button>
+<button class="next" onclick="changeSlide('supply-slideshow', 1)">❯</button>
+  </div>
+
+  <div class="caption" id="caption">Supply</div>
+  <iframe class="video-frame" 
+    src="https://www.youtube.com/embed/LzokqT5Q2B4"
+    title="Youtube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+
+<hr class="blue-line">
+    <div class="section-text">
+      <a style="font-size:25px;" href="Elasticity.pdf" target="_blank">Lesson3 - Price Elasticity</a>
+      <p style="text-align:justify;">      
+      Ang price elasticity ay tumutukoy sa kung gaano 
+	  kalaki ang pagbabago sa dami ng demand o supply 
+	  kapag nagbago ang presyo ng isang produkto. 
+	  Ipinapakita nito kung gaano kasensitibo ang 
+	  mga mamimili o prodyuser sa pagbabago ng presyo.
+	  </p>
+	</div>
+  <div class="slideshow-container" id="elasticity-slideshow">
+    <div class="photo-frame">
+      <div class="slide fade">
+        <img src="https://www.investopedia.com/thmb/FhLbbJRZcWjFk6joCMB9A5rBxDM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Elasticity-b2850112af974101a248abfc6877f987.png" alt="elasticity">
+      </div>
+      <div class="slide fade">
+        <img src="https://cdn.educba.com/academy/wp-content/uploads/2019/11/Elasticity-Formula.jpg" alt="elasticity function">
+      </div>
+      <div class="slide fade">
+        <img src="https://image.slidesharecdn.com/angelastisidadngsuplay-150610092816-lva1-app6891/85/Elasticity-of-Supply-Filipino-8-320.jpg" alt="elasticity curve">
+      </div>
+      <div class="slide fade">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.z6LrEValsjtobOOy6tnBiQHaFj?pid=Api&P=0&h=220" alt="elasticity schedule">
+      </div>
+    </div>
+
+<button class="prev" onclick="changeSlide('elasticity-slideshow', -1)">❮</button>
+<button class="next" onclick="changeSlide('elasticity-slideshow', 1)">❯</button>
+  </div>
+
+  <div class="caption" id="caption">Elasticity</div>
+  <iframe class="video-frame" 
+    src="https://www.youtube.com/embed/1XXhpHJTglg"
+    title="Youtube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+  
+<hr class="blue-line">
+    <div class="section-text">
+      <a style="font-size:25px;" href="Equilibrium.pdf" target="_blank">Lesson4 - Equilibrium</a>
+      <p style="text-align:justify;">      
+      Ang equilibrium ay ang punto kung saan magkakapantay ang dami ng 
+	  demand at supply sa isang takdang presyo. Sa presyong ito, 
+	  walang labis o kulang na produkto, kaya ito ang tinatawag na
+	  equilibrium price o presyo ng kasapatan.
+	  </p>
+	</div>
+  <div class="slideshow-container" id="equilibrium-slideshow">
+    <div class="photo-frame">
+      <div class="slide fade">
+        <img src="https://www.ezilearning.com/wp-content/uploads/2022/12/Demand-and-supply-equilibrium-diagram.jpg" alt="equilibrium">
+      </div>
+      <div class="slide fade">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.QTiCf2Xh0HaBUQ_N6YmlKwHaFj?pid=Api&P=0&h=220" alt="equilibrium shortage">
+      </div>
+      <div class="slide fade">
+        <img src="https://cdn.corporatefinanceinstitute.com/assets/economic-equilibrium1-1024x664.png" alt="equilibrium curve">
+      </div>
+      <div class="slide fade">
+        <img src="https://slidetodoc.com/presentation_image_h2/db34c04ec4780e93c9b1f9edd0fd3b77/image-7.jpg" alt="equilibrium surplus">
+      </div>
+    </div>
+
+<button class="prev" onclick="changeSlide('equilibrium-slideshow', -1)">❮</button>
+<button class="next" onclick="changeSlide('equilibrium-slideshow', 1)">❯</button>
+  </div>
+
+  <div class="caption" id="caption">Equilibrium</div>
+  <iframe class="video-frame" 
+    src="https://www.youtube.com/embed/PEMkfgrifDw"
+    title="Youtube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+  
+<hr class="blue-line">
+    <div class="section-text">
+      <a style="font-size:25px;" href="Pamilihan.pdf" target="_blank">Lesson5 - Iba’t-ibang Estraktura ng Pamilihan</a>
+      <p style="text-align:justify;">      
+      Ang iba’t ibang estruktura ng pamilihan ay tumutukoy sa 
+	  pagkakaiba-iba ng mga anyo ng pamilihan batay sa bilang 
+	  ng nagbebenta at mamimili, uri ng produkto, at antas ng 
+	  kompetisyon. Ipinapakita nito kung paano nagtatakda ng presyo at nagkakaroon 
+	  ng ugnayan ang mga prodyuser at mamimili sa ekonomiya.
+	  </p>
+	</div>
+  <div class="slideshow-container" id="pamilihan-slideshow">
+    <div class="photo-frame">
+      <div class="slide fade">
+        <img src="https://image.slidesharecdn.com/economicsestrukturangpamilihan-160419125711/85/Economics-estruktura-ng-pamilihan-8-320.jpg" alt="monopolyo">
+      </div>
+      <div class="slide fade">
+        <img src="https://image.slidesharecdn.com/economicsestrukturangpamilihan-160419125711/85/Economics-estruktura-ng-pamilihan-16-320.jpg" alt="monopolistikong competition">
+      </div>
+      <div class="slide fade">
+        <img src="https://image.slidesharecdn.com/istrukturangpamilihan-250127013619-0e25e320/85/Istruktura-ng-Pamilihan-ppt-aralin-sa-Ekonomiks-20-320.jpg" alt="monopsony">
+      </div>
+      <div class="slide fade">
+        <img src="https://image.slidesharecdn.com/istrukturangpamilihan-250127013619-0e25e320/85/Istruktura-ng-Pamilihan-ppt-aralin-sa-Ekonomiks-21-320.jpg" alt="oligopolyo">
+      </div>
+    </div>
+
+<button class="prev" onclick="changeSlide('pamilihan-slideshow', -1)">❮</button>
+<button class="next" onclick="changeSlide('pamilihan-slideshow', 1)">❯</button>
+  </div>
+
+  <div class="caption" id="caption">Iba’t-ibang Estraktura ng Pamilihan</div>
+  <iframe class="video-frame" 
+    src="https://www.youtube.com/embed/Wfjpcq7zzis"
+    title="Youtube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+  
+<hr class="blue-line">
+    <div class="section-text">
+      <a style="font-size:25px;" href="Pamahalaan.pdf" target="_blank">Lesson6 - Pamahalaan sa Regulasyon ng mga Gawaing Pangkabuhayan</a>
+      <p style="text-align:justify;">      
+      Ang pamahalaan sa regulasyon ng mga gawaing pangkabuhayan ay 
+	  tumutukoy sa papel ng gobyerno sa pagkontrol at pagsasaayos ng
+	  mga aktibidad sa ekonomiya upang mapanatili 
+	  ang kaayusan, patas na kompetisyon, at kapakanan ng mamamayan.
+	  </p>
+	</div>
+  <div class="slideshow-container" id="pamahalaan-slideshow">
+    <div class="photo-frame">
+      <div class="slide fade">
+        <img src="https://image.slidesharecdn.com/mgapatakaranatprogramangpangkabuhayanngpamahalaan-170209140514/95/mga-patakaran-at-programang-pangkabuhayan-ng-pamahalaan-4-638.jpg?cb=1486649163" alt="pamahalaan">
+      </div>
+      <div class="slide fade">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.BN0TOCWaktklwIELyX4E5QHaFj?pid=Api&P=0&h=220" alt="pamilihan vs pamahalaan">
+      </div>
+    </div>
+
+<button class="prev" onclick="changeSlide('pamahalaan-slideshow', -1)">❮</button>
+<button class="next" onclick="changeSlide('pamahalaan-slideshow', 1)">❯</button>
+  </div>
+
+  <div class="caption" id="caption">Pamahalaan sa Regulasyon ng mga Gawaing Pangkabuhayan</div>
+  <iframe class="video-frame" 
+    src="https://www.youtube.com/embed/QkLy8cjmHAo"
+    title="Youtube video player" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
+    <a href="Events.html">
+    <button class="back-btn">← Back</button>
+    </a>
+  </section>
+<script src="script.js"></script>
+</body>
+</html>

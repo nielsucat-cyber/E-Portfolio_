@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>E-Portfolio</title>
+  <link rel="stylesheet" href="design.css">
+</head>
+<body>
+<header>
+  <h1 class="site-title">E-Portfolio: AP & ICT</h1>
+  <nav>
+    <a href="home.html">Main</a>
+    <a href="personal.html">Personal</a>
+    <a href="ICT.html">ICT</a>
+	<a href="Events.html">Events</a>
+    <a href="AP.html">AP</a>
+  </nav>
+</header>
+  
+<section class="hero">
+  <h2 style="color:white;">Welcome to My E-Portfolio!</h2>
+  <p style="color:white;">
+    Welcome to my e-portfolio—featuring my Personal Space, AP lessons, ICT projects, and reflections on the events that shaped my journey.
+  </p>
+  <a href="#Content" class="cta-btn">Learn More</a>
+</section>
+  
+<section id="Content" class="introduction">
+  <h2>Contents:</h2>
+  <h3>Main Page Contents</h3>
+  <ul style="align:left;">
+    <li>
+      <strong>My Personal Space</strong>
+      <ul>
+        <li>Attach pictures and videos</li>
+        <li>Personal details: Name, Age, Birthday, Favorites</li>
+        <li>Circle of Friends: Socialization, other friendship events</li>
+        <li>My Family: About my family, characteristics, family events</li>
+      </ul>
+    </li>
+    <br><br>
+    <li>
+      <strong>TLE–ICT Contents</strong>
+      <ul>
+        <li>Outputs per lesson</li>
+        <li>Browser output for each lesson</li>
+        <li>Short description / what you learned from each lesson</li>
+        <li>Second quarter school activities</li>
+        <li>Documentation (Pictures and Videos)</li>
+        <li>Reflection for each event (answer the given questions)</li>
+      </ul>
+    </li>
+    <br><br>
+    <li>
+      <strong>Araling Panlipunan Contents</strong>
+      <ul>
+        <li>Yunit II – Maykroekonomiks
+          <ul>
+            <li>Lesson 1 – Demand</li>
+            <li>Lesson 2 – Supply</li>
+            <li>Lesson 3 – Price Elasticity</li>
+            <li>Lesson 4 – Market Equilibrium</li>
+            <li>Lesson 5 – Iba’t-ibang Estraktura ng Pamilihan</li>
+            <li>Lesson 6 – Bahaging Ginagampanan ng Pamahalaan sa Regulasyon ng mga Gawaing Pangkabuhayan</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <img src="contents.jpeg" alt="Dog Crying Because It's Tired">
+  <br><br>
+    <a href="personal.html">
+    <button class="next-btn">Next →</button>
+  </a>
+</section>
+</body>
+</html>
