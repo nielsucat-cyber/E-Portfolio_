@@ -1,4 +1,4 @@
-To Access all the files click the main page 
+To access all the files click the main page !
 <html>
 <head>
   <title>E-Portfolio</title>
